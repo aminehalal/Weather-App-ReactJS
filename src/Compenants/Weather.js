@@ -37,39 +37,39 @@ export default function Weather() {
       <div className='flex flex-col items-center'>
           {weatherData && (
               <>
-              <div className='p-2'>
-                <h1 className='text-5xl font-bold text-white capitalize'>{city}</h1>
+              <div className='p-1 sm:p-2'>
+                <h1 className='text-3xl sm:text-5xl font-bold text-white capitalize'>{city}</h1>
               </div>
                 <div className='flex flex-col justify-center items-center'>
                   {weatherData.main.temp > 30 ? (
                     <div className='flex flex-col justify-center items-center'>
-                      <img className='h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/sunny-day-16458.png'} alt={weatherData.main.temp}/>
-                      <h3 className='text-white text-3xl font-bold'>{weatherData.main.temp} °C</h3>
+                      <img className='h-20 sm:h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/sunny-day-16458.png'} alt={weatherData.main.temp}/>
+                      <h3 className='text-white text-xl sm:text-3xl font-bold'>{weatherData.main.temp} °C</h3>
                     </div>
                   ):(weatherData.main.temp > 25 ? (
                     <div className='flex flex-col justify-center items-center'>
-                      <img className='h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/sun-and-blue-cloud-16460.png'} alt={weatherData.main.temp}/>
-                      <h3 className='text-white text-3xl font-bold'>{weatherData.main.temp} °C</h3>
+                      <img className='h-20 sm:h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/sun-and-blue-cloud-16460.png'} alt={weatherData.main.temp}/>
+                      <h3 className='text-white text-xl sm:text-3xl font-bold'>{weatherData.main.temp} °C</h3>
                     </div>
                   ):(weatherData.main.temp > 18 ? (
                     <div className='flex flex-col justify-center items-center'>
-                      <img className='h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/blue-clouds-and-sun-16461.png'} alt={weatherData.main.temp}/>
-                      <h3 className='text-white text-3xl font-bold'>{weatherData.main.temp} °C</h3>
+                      <img className='h-20 sm:h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/blue-clouds-and-sun-16461.png'} alt={weatherData.main.temp}/>
+                      <h3 className='text-white text-xl sm:text-3xl font-bold'>{weatherData.main.temp} °C</h3>
                     </div>
                   ):(
                     <div className='flex flex-col justify-center items-center'>
-                      <img className='h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/cloudy-weather-16459.png'} alt={weatherData.main.temp}/>
-                      <h3 className='text-white text-3xl font-bold'>{weatherData.main.temp} °C</h3>
+                      <img className='h-20 sm:h-36' src={process.env.PUBLIC_URL +'/Icons/PNG/cloudy-weather-16459.png'} alt={weatherData.main.temp}/>
+                      <h3 className='text-white text-xl sm:text-3xl font-bold'>{weatherData.main.temp} °C</h3>
                     </div>
                   ))
                   )}
-                  <div className='text-2xl text-white font-bold flex p-5'>
-                  <div className='flex p-2 px-5'>
-                    <img className='h-8 px-2' src={process.env.PUBLIC_URL +'/Icons/PNG/humidity.png'} alt={weatherData.main.humidity}/>
+                  <div className='text-lg sm:text-2xl text-white font-bold flex p-3 sm:p-5'>
+                  <div className='flex p-2 px-2 sm:px-5'>
+                    <img className='h-5 sm:h-8 px-1 sm:px-2' src={process.env.PUBLIC_URL +'/Icons/PNG/humidity.png'} alt={weatherData.main.humidity}/>
                     <p>{weatherData.main.humidity} %</p>
                   </div>
-                  <div className='flex p-2 px-5'>
-                    <img className='h-8 px-2' src={process.env.PUBLIC_URL +'/Icons/PNG/windy-16476.png'} alt={weatherData.wind.speed}/>
+                  <div className='flex p-2 px-2 sm:px-5'>
+                    <img className='h-5 sm:h-8 px-1 sm:px-2' src={process.env.PUBLIC_URL +'/Icons/PNG/windy-16476.png'} alt={weatherData.wind.speed}/>
                     <p>{weatherData.wind.speed} m/s</p>
                   </div>
 
